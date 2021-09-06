@@ -1,0 +1,63 @@
+package com.cmpinspector.app.ModelResponse.StepThree;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Image {
+
+    @SerializedName("image_id")
+    @Expose
+    private Long imageId;
+    @SerializedName("property_id")
+    @Expose
+    private Long propertyId;
+    @SerializedName("property_image")
+    @Expose
+    private String propertyImage;
+    @SerializedName("creation_date")
+    @Expose
+    private Integer creationDate;
+    @SerializedName("_id")
+    @Expose
+    private Id id;
+
+    public Long getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(Long imageId) {
+        this.imageId = imageId;
+    }
+
+    public Long getPropertyId() {
+        return propertyId;
+    }
+
+    public void setPropertyId(Long propertyId) {
+        this.propertyId = propertyId;
+    }
+
+    public String getPropertyImage() {
+        return propertyImage;
+    }
+
+    public void setPropertyImage(String propertyImage) {
+        this.propertyImage = propertyImage;
+    }
+
+    public Integer getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Integer creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public Id getId() {
+        return id;
+    }
+
+    public void setId(Id id) {
+        this.id = id;
+    }
+}

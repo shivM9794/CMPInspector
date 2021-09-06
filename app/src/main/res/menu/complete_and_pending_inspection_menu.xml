@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/home_logo"
+        android:icon="@drawable/home_cmp"
+        android:title="Home"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/profile_logo"
+        android:enabled="true"
+        android:icon="@drawable/profile_logocmp"
+        android:title="Profile"
+        tools:ignore="MenuTitle" />
+
+
+</menu>

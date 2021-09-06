@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276782031616",
+    "project_id": "cmpinspectorapp",
+    "storage_bucket": "cmpinspectorapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276782031616:android:3062178640e8ae415389e5",
+        "android_client_info": {
+          "package_name": "com.cmpinspector.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276782031616-7ph8oacsqblrjlnqrn4ehlq7k1fbn4vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTEPp8CVteREXBXEObNf4AYFqt5w_28so"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276782031616-7ph8oacsqblrjlnqrn4ehlq7k1fbn4vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

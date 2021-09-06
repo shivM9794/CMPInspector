@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="20dp"
+    tools:context=".HomeSection.BasicDetails1Activity">
+
+
+    <ImageView
+        android:id="@+id/basic_detail2_img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_back_arrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save2_btn"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/forgot_pass_button_bg"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toEndOf="@+id/basic_detail2_img2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="STEP 1 OF 3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Property Details"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/steps">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txt_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Location, Room Details, Area etc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_details">
+
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/img_steps"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/step1_img_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_type">
+
+    </ImageView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_steps">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/kind_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Where is it located?"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <AutoCompleteTextView
+                android:id="@+id/location_place_save"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/textview_bg"
+                android:hint="Search..."
+                android:inputType="textAutoComplete"
+                android:textSize="15sp"
+                android:paddingStart="25dp"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kind_property" />
+
+
+            <Button
+                android:id="@+id/use_location_2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/forgot_pass_button_bg"
+                android:gravity="center"
+                android:text="Use my current location"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_place_save" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/room_details"
+                app:layout_constraintTop_toBottomOf="@+id/recycler2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/room_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Area details"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/divider"
+                app:layout_constraintRight_toLeftOf="@+id/divider_right"
+                app:layout_constraintTop_toBottomOf="@+id/recycler2" />
+
+            <View
+                android:id="@+id/divider_right"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/black"
+                app:layout_constraintLeft_toRightOf="@+id/room_details"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/bedrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="No. of bedrooms"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_details" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/text_bed_no"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/textview_bg"
+                android:hint="03"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bedrooms" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Area Details"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bed_no" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_areadetails"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/textview_bg"
+                android:hint="7000"
+                android:inputType="numberDecimal"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/area" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/textview_bg"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/txt_areadetails"
+                app:layout_constraintTop_toBottomOf="@+id/area" />
+
+            <TextView
+                android:id="@+id/property_type_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="What type of property? "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_areadetails" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/property_type_txt" />
+
+
+            <TextView
+                android:id="@+id/kindproperty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="What Kind of Property?"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/use_location_2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.013"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kindproperty">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/property_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Select type of property"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.026"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/property_type" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/recycler3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:id="@+id/edit_deed"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Title Deed"
+                >
+            </TextView>
+
+
+
+
+            <ImageView
+                android:id="@+id/plus_button_deed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler3">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/titledeedimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Title Deed"
+                android:background="@drawable/textview_bg"
+                android:padding="8dp"
+                android:drawablePadding="15dp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/certificate"
+                android:drawableRight="@drawable/remove"
+                app:layout_constraintTop_toBottomOf="@+id/edit_deed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/titledeedimg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/edit_eid"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="EID/Passport">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/eid_plus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titledeedimg">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/eid_passimg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="EID/Passport"
+                android:background="@drawable/textview_bg"
+                android:padding="8dp"
+                android:drawablePadding="15dp"
+
+                android:gravity="center"
+                android:drawableLeft="@drawable/passport"
+                android:drawableRight="@drawable/remove"
+                app:layout_constraintTop_toBottomOf="@+id/edit_eid"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edit_eid"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:id="@+id/edit_tradelicense"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Trade License">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/license_plus_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eid_plus_button">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tra_lic_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Trade License"
+                android:background="@drawable/textview_bg"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:drawableLeft="@drawable/trade_license"
+                android:drawableRight="@drawable/remove"
+                app:layout_constraintTop_toBottomOf="@+id/edit_tradelicense"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tra_lic_img"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/eid"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="EID">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/eid_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:src="@drawable/add_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tra_lic_img">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/eid_com_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="EID"
+                android:visibility="gone"
+                android:background="@drawable/textview_bg"
+                android:padding="8dp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/passport"
+                android:drawableRight="@drawable/remove"
+                app:layout_constraintTop_toBottomOf="@+id/eid"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/eid_com_img"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/poa"
+                android:fontFamily="@font/open_sans_semibold"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="POA(Power of Attorney)">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/poa_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:fontFamily="@font/open_sans_semibold"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/add_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eid_com_img">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/poa_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="POA"
+                android:background="@drawable/textview_bg"
+                android:padding="8dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/poa"
+                android:drawableRight="@drawable/remove"
+                app:layout_constraintTop_toBottomOf="@+id/poa"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+            </TextView>
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/edit_deed"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:fontFamily="@font/open_sans_semibold"-->
+<!--                android:text="Title Deed"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/recycler3" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/aa_one"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:src="@drawable/add_icon"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.945"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/edit_deed"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/recycler3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/deed_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:background="@drawable/textview_bg"-->
+<!--                android:drawableStart="@drawable/deed"-->
+<!--                android:drawableEnd="@drawable/remove"-->
+<!--                android:drawablePadding="15dp"-->
+<!--                android:gravity="start|center_vertical"-->
+<!--                android:paddingStart="15dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="Title Deed"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/edit_deed" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/edit_eid"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:fontFamily="@font/open_sans_semibold"-->
+<!--                android:text="EID or Passport"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/deed_btn" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageView3"-->
+<!--                android:layout_width="32dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:layout_marginStart="238dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:src="@drawable/add_icon"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/edit_eid"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/deed_btn"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/deed_btn" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/eid_btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_marginTop="33dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:background="@drawable/textview_bg"-->
+<!--                android:drawableStart="@drawable/passport"-->
+<!--                android:drawableEnd="@drawable/remove"-->
+<!--                android:drawablePadding="15dp"-->
+<!--                android:gravity="start|center_vertical"-->
+<!--                android:paddingStart="15dp"-->
+<!--                android:paddingEnd="12dp"-->
+<!--                android:text="EID"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/edit_eid"-->
+<!--                app:layout_constraintVertical_bias="0.0" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/edit_tradelicense"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:fontFamily="@font/open_sans_semibold"-->
+<!--                android:text="Trade License"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/edit_eid" />-->
+
+
+            <!--            <Button-->
+            <!--                android:id="@+id/details1_next_btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_margin="30dp"-->
+            <!--                android:layout_marginTop="24dp"-->
+            <!--                android:layout_marginRight="32dp"-->
+            <!--                android:background="@drawable/forgot_pass_button_bg"-->
+            <!--                android:drawableRight="@drawable/ic_forward_arrow"-->
+            <!--                android:fontFamily="@font/open_sans_semibold"-->
+            <!--                android:text="Next"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/eid_btn"-->
+            <!--                app:layout_constraintVertical_bias="0.0" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CMPInspector</string>
+    <string name="cash_out_your_property_in_10_days">Cash Out Your Property In 10 Days</string>
+    <string name="property">PROPERTY</string>
+    <string name="cash_my">CASH MY</string>
+    <string name="apartment_no_706">Apartment No. 706...</string>
+    <string name="hi_mohd_shaikh">Hi!! Mohd Shaikh</string>
+    <string name="latest_inqueries">Latest Inqueries</string>
+    <string name="let_s_verify_your_account">Let\'s verify your Account.</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="password">Password</string>
+
+    <string-array name="units">
+        <item>sq.ft</item>
+        <item>sq.m</item>
+
+
+    </string-array>
+</resources>

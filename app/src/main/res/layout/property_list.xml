@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="MissingConstraints">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/property_img"
+                android:layout_width="127dp"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="10dp"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/dashboard_cmp" />
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="179dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="29dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="4BR+\nStudyRoom+\nStore"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="124dp"
+                android:layout_marginBottom="-23dp"
+                android:background="@drawable/property_adapter_card_design"
+                android:text="Area - 5,678 sq.ft"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/property_ids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="71dp"
+                android:layout_marginEnd="75dp"
+                android:text="CMP10000000102"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="88dp"
+                android:layout_marginEnd="149dp"
+                android:drawableStart="@drawable/ic_loc"
+                android:fontFamily="@font/open_sans"
+                android:text="Apartment No 706,Forte T1,..."
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/com_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/textview_bg_property_list"
+                android:gravity="center"
+                android:text="Approved"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
