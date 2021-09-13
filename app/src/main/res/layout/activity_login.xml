@@ -83,11 +83,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="340dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
         app:endIconMode="password_toggle"
         app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_txt3">
 

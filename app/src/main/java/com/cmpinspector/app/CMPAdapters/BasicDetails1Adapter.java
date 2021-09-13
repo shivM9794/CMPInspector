@@ -48,10 +48,12 @@ public class BasicDetails1Adapter extends RecyclerView.Adapter<BasicDetails1Adap
         List<PropertyType> propertyType = kindOfProperties.get(position).getPropertyType();
         if (position == 0) {
             String cat_id = String.valueOf(kindOfProperties.get(position).getCategoryId());
+            String name= kindOfProperties.get(position).getCategoryName();
             holder.button.setBackgroundResource(R.drawable.background_input);
-            onclickListener.onClick(propertyType, cat_id);
+            onclickListener.onClick(propertyType, cat_id,name);
         }
         if(check_pos==position){
+            String name= kindOfProperties.get(position).getCategoryName();
             holder.button.setBackgroundResource(R.drawable.background_input);
             sub_catid= String.valueOf(kindOfProperties.get(position).getCategoryId());
             onclickListener.onClick(sub_catid);
@@ -64,8 +66,9 @@ public class BasicDetails1Adapter extends RecyclerView.Adapter<BasicDetails1Adap
             @Override
             public void onClick(View v) {
                 String cat_id = String.valueOf(kindOfProperties.get(position).getCategoryId());
+                String name= kindOfProperties.get(position).getCategoryName();
                 //  holder.txt_type.setBackgroundResource(R.drawable.rounded_edittext_border);
-                onclickListener.onClick(propertyType, cat_id);
+                onclickListener.onClick(propertyType, cat_id,name);
             }
 
 
@@ -82,7 +85,7 @@ public class BasicDetails1Adapter extends RecyclerView.Adapter<BasicDetails1Adap
 
     public interface OnclickListener {
 
-        public void onClick(List<PropertyType> propertyType, String string);
+        public void onClick(List<PropertyType> propertyType, String string,String name);
 
         void onClick(String sub_catid);
     }

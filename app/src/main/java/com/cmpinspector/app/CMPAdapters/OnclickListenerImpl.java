@@ -6,7 +6,7 @@ import java.util.List;
 
 public class OnclickListenerImpl implements BasicDetails1Adapter.OnclickListener {
     @Override
-    public void onClick(List<PropertyType> propertyType, String string) {
+    public void onClick(List<PropertyType> propertyType, String string,String name) {
         
     }
 

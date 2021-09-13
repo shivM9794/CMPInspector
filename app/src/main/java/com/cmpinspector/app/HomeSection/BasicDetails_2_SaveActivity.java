@@ -100,6 +100,8 @@ public class BasicDetails_2_SaveActivity extends AppCompatActivity implements Ad
     List<LocationDatum> data;
     String title_deeds="",eids="",trade_licenses="",poas="",passport="";
     List<MultipartBody.Part> files,files1,files2,files3,files4;
+    TextView bedrooms;
+    String kindprop;
 
 
 
@@ -112,6 +114,7 @@ public class BasicDetails_2_SaveActivity extends AppCompatActivity implements Ad
         textInputEditText2 = findViewById(R.id.no_of_bedrooms);
         btn_location = findViewById(R.id.use_location_2);
         txt_areadetails= findViewById(R.id.txt_areadetails);
+        bedrooms= findViewById(R.id.bedrooms);
         location_place_save = findViewById(R.id.location_place_save);
         text_bed_no = findViewById(R.id.text_bed_no);
         address= getIntent().getStringExtra("Address");
@@ -138,6 +141,8 @@ public class BasicDetails_2_SaveActivity extends AppCompatActivity implements Ad
         recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         recyclerView2.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         recyclerView3.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+
+
         step_one_save();
         step_one_two_submit();
         get_bedno();
@@ -697,10 +702,14 @@ public class BasicDetails_2_SaveActivity extends AppCompatActivity implements Ad
 //                        PreferenceUtils.setStringValue(getApplicationContext(), PreferenceUtils.property_id, property_id);
 
                         List<KindOfProperty> kindOfProperties = stepOneAndTwoResponse.getResult().getKindOfProperty();
+
+
                         basicDetails1Adapter = new BasicDetails1Adapter(getApplicationContext(), kindOfProperties, BasicDetails_2_SaveActivity.this);
                         recyclerView.setAdapter(basicDetails1Adapter);
 
                         List<PropertyHolder> propertyHolders = stepOneAndTwoResponse.getResult().getPropertyHolder();
+
+
 
                         TypePropertyAdapter typePropertyAdapter = new TypePropertyAdapter(getApplicationContext(), propertyHolders, BasicDetails_2_SaveActivity.this,BasicDetails_2_SaveActivity.this);
                         recyclerView3.setAdapter(typePropertyAdapter);
@@ -767,9 +776,18 @@ public class BasicDetails_2_SaveActivity extends AppCompatActivity implements Ad
 
 
     @Override
-    public void onClick(List<PropertyType> propertyType, String string) {
+    public void onClick(List<PropertyType> propertyType, String string,String name) {
 
         cat_id = string;
+        kindprop= name;
+        if (kindprop.equalsIgnoreCase("Residential")){
+            bedrooms.setVisibility(View.VISIBLE);
+            text_bed_no.setVisibility(View.VISIBLE);
+        }
+        else {
+            bedrooms.setVisibility(View.GONE);
+            text_bed_no.setVisibility(View.GONE);
+        }
 
         SelectPropertyAdapter selectPropertyAdapter = new SelectPropertyAdapter(getApplicationContext(), propertyType, BasicDetails_2_SaveActivity.this);
         recyclerView2.setAdapter(selectPropertyAdapter);

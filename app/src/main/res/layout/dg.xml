@@ -121,11 +121,11 @@
 
                     <TextView
                         android:id="@+id/pending_txt4"
-                        android:layout_width="245dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:fontFamily="@font/open_sans"
-                        android:text="Apartment no.\n706,Forte T1"
+                        android:text="Apartment no.706,Forte T1"
                         android:textColor="@color/black"
                         android:textSize="11sp"
                         app:drawableLeftCompat="@drawable/ic_baseline_location_on_24">

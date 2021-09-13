@@ -36,7 +36,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BasicDetails1Activity extends AppCompatActivity implements BasicDetails1Adapter.OnclickListener, SelectPropertyAdapter.OnclickListener {
+public class BasicDetails1Activity extends AppCompatActivity  {
     Button button, edit_1, deed, eid;
     TextView residental, address_field, apartment, no_of_bedrooms, area_details, locationname, type_of_property;
     ImageView imageView;
@@ -48,6 +48,7 @@ public class BasicDetails1Activity extends AppCompatActivity implements BasicDet
     private SpinKitView spinKitView;
     String path="";
     String eid_path="",address="Test Address";
+    String kind_prop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +156,7 @@ public class BasicDetails1Activity extends AppCompatActivity implements BasicDet
 
                         PropertyData propertyData = stepOneAndTwoResponse.getResult().getPropertyData();
                         locationname.setText(propertyData.getPropertyDetailsData().getLocationName());
+//                        kind_prop=propertyData.getPropertyDetailsData().getKindOfPropertyName();
                         residental.setText(propertyData.getPropertyDetailsData().getKindOfPropertyName());
                         apartment.setText(propertyData.getPropertyDetailsData().getPropertyTypeName());
                         no_of_bedrooms.setText(String.valueOf(propertyData.getPropertyDetailsData().getNoOfBed()));
@@ -195,18 +197,18 @@ public class BasicDetails1Activity extends AppCompatActivity implements BasicDet
     }
 
 
-    @Override
-    public void onClick(List<PropertyType> propertyType, String string) {
-
-        cat_id = string;
-
-        SelectPropertyAdapter selectPropertyAdapter = new SelectPropertyAdapter(getApplicationContext(), propertyType, BasicDetails1Activity.this);
-        recyclerView2.setAdapter(selectPropertyAdapter);
-
-    }
-
-    @Override
-    public void onClick(String string) {
-        sub_catid = string;
-    }
+//    @Override
+//    public void onClick(List<PropertyType> propertyType, String string) {
+//
+//        cat_id = string;
+//
+//        SelectPropertyAdapter selectPropertyAdapter = new SelectPropertyAdapter(getApplicationContext(), propertyType, BasicDetails1Activity.this);
+//        recyclerView2.setAdapter(selectPropertyAdapter);
+//
+//    }
+//
+//    @Override
+//    public void onClick(String string) {
+//        sub_catid = string;
+//    }
 }
